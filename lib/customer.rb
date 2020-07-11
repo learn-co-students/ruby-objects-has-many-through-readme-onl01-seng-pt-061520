@@ -12,4 +12,6 @@ class Customer
     @age = age
     @@all << self
   end
+  
+  def meal
 end
