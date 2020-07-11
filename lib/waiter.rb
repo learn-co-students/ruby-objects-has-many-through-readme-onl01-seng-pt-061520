@@ -13,15 +13,20 @@ class Waiter
     @@all << self
   end
   
-  def new_meal
-    
+  def new_meal(waiter, total, tip = 0)
+    Meal.new(waiter, self, total, tip)
   end
   
   def meals
-    
+    Meal.all.select do |meal|
+      meal.waiter == self
+    end
   end
   
-  def best_tipper
-    
+  def waiters
+    meals.map do |meal|
+      meal.waiter
   end
+end
+
 end
