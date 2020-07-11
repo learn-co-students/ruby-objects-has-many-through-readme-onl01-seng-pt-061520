@@ -3,7 +3,8 @@ class Customer
   
   @@all = []
   
-  
+  def self.all
+    @@all
   
   def initialize (name, age)
     @name = name
