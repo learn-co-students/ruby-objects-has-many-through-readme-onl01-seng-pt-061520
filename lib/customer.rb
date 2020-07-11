@@ -13,5 +13,5 @@ class Customer
     @@all << self
   end
   
-  def meal
+  def new_meal(meal)
 end
