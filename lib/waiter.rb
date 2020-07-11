@@ -3,11 +3,13 @@ class Waiter
   
   @@all = []
   
-  def self
+  def self.all
+    @@all
+  end
   
   def initialize(name, years_exp)
     @name = name
     @years_exp = years_exp
-    
+    @@all << self
   end
 end
